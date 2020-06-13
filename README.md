@@ -1,6 +1,6 @@
 # dragon2control
 
-A new Flutter application. Test
+A new Flutter application.
 
 ## Getting Started
 
