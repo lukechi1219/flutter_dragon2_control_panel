@@ -36,14 +36,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   VideoPlayerController _controller;
 
-  /**
-   * https://github.com/AseemWangoo/experiments_with_web/blob/master/lib/iframe/iframe.dart
-   *
-   * https://github.com/AseemWangoo/experiments_with_web/tree/master/lib
-   *
-   * https://flatteredwithflutter.com/flutter-web-and-iframe/
-   * https://dev.to/aseemwangoo/flutter-web-and-iframe-n2d
-   */
+  ///
+  /// https://github.com/AseemWangoo/experiments_with_web/blob/master/lib/iframe/iframe.dart
+  ///
+  /// https://github.com/AseemWangoo/experiments_with_web/tree/master/lib
+  ///
+  /// https://flatteredwithflutter.com/flutter-web-and-iframe/
+  ///
+  /// https://dev.to/aseemwangoo/flutter-web-and-iframe-n2d
+
   final IFrameElement _iframeElement = IFrameElement();
 
   @override
