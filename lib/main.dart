@@ -116,15 +116,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     value: '13:46:11',
                   ),
                   uiBlock(
-                    value: '625,713m',
+                    value: '',
                   ),
                   uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
+                    title: 'Next Burn',
+                    value: '-0:05:48',
                   ),
                   uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
+                    title: 'Target AV',
+                    value: '33.5 m/s',
                   ),
                 ],
               ),
@@ -142,12 +142,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: [
                   uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
+                    value: '-0:08:24 Next LOS',
                   ),
                   uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
+                    value: '-0:23:23 Next Deorbit Window',
                   ),
                 ],
               ),
@@ -156,23 +154,11 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: [
                   uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
+                    value: '-02:51:02 Estimated ISS Arrival',
                   ),
                   uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Row(
-                children: [
-                  uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
+                    title: 'Current Breakout',
+                    value: 'Retrograde AV = 5.0 m/s',
                   ),
                 ],
               ),
@@ -182,8 +168,19 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: [
                   uiBlock(
-                    title: 'Range to ISS',
-                    value: '625,713m',
+                    title: 'Schedule',
+                    value: '',
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Row(
+                children: [
+                  uiBlock(
+                    title: 'Rendezvous',
+                    value: '',
                   ),
                 ],
               ),
@@ -200,7 +197,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.all(2.0),
+        padding: const EdgeInsets.all(4.0),
+        margin: const EdgeInsets.all(1.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(0),
           gradient: LinearGradient(
@@ -218,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ? widthExpanded(
                     Text(
                       title,
-                      style: TextStyle(fontSize: 12),
+                      style: TextStyle(fontSize: 8, color: Colors.white),
                     ),
                     const EdgeInsets.only(left: 4.0, top: 4.0, right: 4.0, bottom: 0.0),
                   )
@@ -226,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
             widthExpanded(
               Text(
                 value,
-                style: TextStyle(fontSize: 24),
+                style: TextStyle(fontSize: 18, color: Colors.white),
               ),
               const EdgeInsets.only(left: 4.0, top: 0.0, right: 4.0, bottom: 4.0),
               2,
