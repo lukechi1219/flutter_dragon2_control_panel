@@ -199,13 +199,23 @@ class _MyHomePageState extends State<MyHomePage> {
     @required String value,
   }) {
     return Expanded(
-      child: Padding(
+      child: Container(
         padding: const EdgeInsets.all(2.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(0),
+          gradient: LinearGradient(
+            colors: [
+              Color(0xffA9A9A9),
+              Color(0xff808080),
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: Column(
           children: [
             (title != null)
                 ? widthExpanded(
-                    Colors.grey,
                     Text(
                       title,
                       style: TextStyle(fontSize: 12),
@@ -213,7 +223,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
                 : Container(),
             widthExpanded(
-              Colors.blueGrey,
               Text(
                 value,
                 style: TextStyle(fontSize: 24),
@@ -226,11 +235,10 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Expanded widthExpanded(Color _color, Text _child, [int _flex]) {
+  Expanded widthExpanded(Text _child, [int _flex]) {
     return Expanded(
       flex: _flex,
       child: Container(
-        color: _color,
         child: Row(
           children: [
             Expanded(
