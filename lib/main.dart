@@ -220,6 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       title,
                       style: TextStyle(fontSize: 12),
                     ),
+                    const EdgeInsets.only(left: 4.0, top: 4.0, right: 4.0, bottom: 0.0),
                   )
                 : Container(),
             widthExpanded(
@@ -227,6 +228,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 value,
                 style: TextStyle(fontSize: 24),
               ),
+              const EdgeInsets.only(left: 4.0, top: 0.0, right: 4.0, bottom: 4.0),
               2,
             ),
           ],
@@ -235,7 +237,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Expanded widthExpanded(Text _child, [int _flex]) {
+  Expanded widthExpanded(Text _child, EdgeInsetsGeometry _padding,
+      [int _flex]) {
     return Expanded(
       flex: _flex,
       child: Container(
@@ -243,7 +246,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(4.0),
+                padding: _padding,
                 child: _child,
               ),
             ),
