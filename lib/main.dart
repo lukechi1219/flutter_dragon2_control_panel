@@ -203,8 +203,8 @@ class _MyHomePageState extends State<MyHomePage> {
           borderRadius: BorderRadius.circular(0),
           gradient: LinearGradient(
             colors: [
-              Color(0xffA9A9A9),
-              Color(0xff808080),
+              Color(0xff768BA9),
+              Color(0xff647897),
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
